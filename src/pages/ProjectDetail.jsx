@@ -15,7 +15,7 @@ const projectsData = {
     title: "MERN Portfolio",
     subtitle: "Personal portfolio website — MERN Stack",
     image: portfolioImg,
-    live: "https://your-portfolio.vercel.app", // 🔴 update with real link
+    live: "https://debasisprotfolio-ygmz-three.vercel.app/", // 🔴 update with real link
     github: "https://debasisprotfolio-ygmz-three.vercel.app/", // 🔴 update
     tech: ["MongoDB", "Express.js", "React", "Node.js", "Bootstrap", "JWT Auth"],
     overview:
