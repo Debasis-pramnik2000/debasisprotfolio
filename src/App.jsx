@@ -1,7 +1,7 @@
 
 import { Routes, Route } from "react-router-dom";
 
-import AIWidget from "./components/AIWidget.jsx";
+import AIWidget from "./Components/AIWidget.jsx";
 import Navbar from "./Components/Navbar.jsx";
 
 import Home from "./pages/Home.jsx";
