@@ -24,9 +24,9 @@ const Contact = () => {
 
     try {
       const res = await axios.post(
-        "https://render-backend-ygjf.onrender.com/api/contact",
-        formData
-      );
+  "https://protfoliobackend-hbuh.onrender.com/api/contact",
+  formData
+);
 
       // Backend returns { success: true, message: "Email Sent Successfully" }
       setStatus(res.data.message);
