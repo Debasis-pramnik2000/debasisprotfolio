@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-
+import AIWidget from "./components/AIWidget.jsx";
 import Navbar from "./Components/Navbar.jsx";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
@@ -21,6 +21,7 @@ function App() {
         <Route path="/project/:slug" element={<ProjectDetail />} />  {/* 👈 ADD THIS */}
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <AIWidget />
     </>
   );
 }
