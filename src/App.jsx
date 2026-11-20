@@ -21,8 +21,6 @@ function App() {
         <Route path="/project/:slug" element={<ProjectDetail />} />  {/* 👈 ADD THIS */}
         <Route path="/contact" element={<Contact />} />
       </Routes>
-
-      <AIWidget />
     </>
   );
 }
