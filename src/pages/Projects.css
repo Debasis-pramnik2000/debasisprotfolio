@@ -1,0 +1,258 @@
+/* ===================================================== */
+/* ================= PROJECTS SECTION ================== */
+/* ===================================================== */
+.projects-section {
+  background: #0d0d0d;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ambient glow blobs */
+.projects-section::before {
+  content: "";
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  width: 400px;
+  height: 400px;
+  background: #00ff88;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.projects-section::after {
+  content: "";
+  position: absolute;
+  bottom: -150px;
+  right: -150px;
+  width: 400px;
+  height: 400px;
+  background: #a855f7;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* ================= HEADING ================= */
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  color: #00ff88;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 40px;
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  background: rgba(0, 255, 136, 0.05);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #00ff88, #00c3ff, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ================= PROJECT CARD ================= */
+.project-card {
+  display: block;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #fff;
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s ease;
+}
+.project-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.project-card:hover {
+  color: #fff;
+  border-color: rgba(0, 255, 136, 0.5);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 255, 136, 0.15);
+}
+
+/* ================= IMAGE ================= */
+.project-img-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #111;
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.project-card:hover .project-img {
+  transform: scale(1.08);
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.3) 60%,
+    transparent 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.view-btn {
+  background: linear-gradient(135deg, #00ff88, #00c3ff);
+  color: #0d0d0d;
+  padding: 8px 18px;
+  border-radius: 40px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  transform: translateY(10px);
+  transition: transform 0.4s ease;
+}
+.project-card:hover .view-btn {
+  transform: translateY(0);
+}
+
+/* ================= BODY ================= */
+.project-body {
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 62%);
+}
+
+.project-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.project-desc {
+  font-size: 0.88rem;
+  color: #9a9a9a;
+  line-height: 1.6;
+  margin-bottom: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ================= TECH BADGES ================= */
+.tech-badge {
+  font-size: 0.72rem;
+  padding: 4px 10px;
+  border-radius: 40px;
+  background: rgba(0, 255, 136, 0.08);
+  border: 1px solid rgba(0, 255, 136, 0.25);
+  color: #00ff88;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* ================= LINKS ================= */
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #00ff88;
+  transition: gap 0.3s ease;
+}
+.project-card:hover .project-link {
+  gap: 6px;
+}
+
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.03);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.github-link:hover {
+  border-color: #00ff88;
+  color: #00ff88;
+  background: rgba(0, 255, 136, 0.08);
+}
+
+/* ================= OUTLINE BUTTON ================= */
+.btn-outline-glow {
+  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50px;
+  background: transparent;
+  transition: all 0.25s ease;
+}
+.btn-outline-glow:hover {
+  border-color: #00ff88;
+  color: #00ff88;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+  transform: translateY(-3px);
+}
+
+/* ===================================================== */
+/* ==================== MOBILE ========================= */
+/* ===================================================== */
+@media (max-width: 991.98px) {
+  .project-body {
+    height: auto;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .project-title {
+    font-size: 1.05rem;
+  }
+  .project-desc {
+    font-size: 0.84rem;
+    -webkit-line-clamp: 2;
+  }
+  .project-img-wrapper {
+    aspect-ratio: 16 / 9;
+  }
+  .project-overlay {
+    opacity: 1;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.75) 0%,
+      transparent 60%
+    );
+  }
+  .view-btn {
+    transform: translateY(0);
+    font-size: 0.78rem;
+    padding: 6px 14px;
+  }
+}

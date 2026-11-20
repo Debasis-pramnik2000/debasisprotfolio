@@ -1,0 +1,154 @@
+/* ===================================================== */
+/* ============== APP-LEVEL GLOBAL STYLES ============== */
+/* ===================================================== */
+
+/* Smooth scrolling for anchor links (#home, #skills, #projects) */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0d0d0d;
+  color: #e5e5e5;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent image drag on cards (looks cleaner) */
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* ===================================================== */
+/* ============== CONTACT FORM FIXES =================== */
+/* ===================================================== */
+
+/* Visible placeholder on dark background */
+.contact-input::placeholder {
+  color: #9a9a9a !important;
+  opacity: 1 !important;
+}
+
+/* Green focus border */
+.contact-input:focus {
+  border-color: #00ff88 !important;
+  box-shadow: 0 0 0 2px rgba(0, 255, 136, 0.2);
+}
+
+/* Stop Chrome autofill from breaking the theme */
+.contact-input:-webkit-autofill,
+.contact-input:-webkit-autofill:hover,
+.contact-input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff !important;
+  -webkit-box-shadow: 0 0 0px 1000px #1a1a1a inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+  caret-color: #00ff88;
+}
+
+/* ===================================================== */
+/* ============== SCROLLBAR (NICE TOUCH) =============== */
+/* ===================================================== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0d0d;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 136, 0.35);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 136, 0.6);
+}
+
+/* ===================================================== */
+/* ============== TEXT SELECTION ======================= */
+/* ===================================================== */
+::selection {
+  background: rgba(0, 255, 136, 0.3);
+  color: #fff;
+}
+/* ================= LIGHT MODE OVERRIDES ================= */
+[data-theme="light"] {
+  --bg: #f5f5f5;
+  --text: #4b5563;
+  --text-h: #0d0d0d;
+  --border: #e5e7eb;
+  --social-bg: rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="light"] body {
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* Section backgrounds */
+[data-theme="light"] .hero-section,
+[data-theme="light"] .about-section,
+[data-theme="light"] .skills-section,
+[data-theme="light"] .projects-section,
+[data-theme="light"] .project-detail-section {
+  background: #f5f5f5 !important;
+}
+
+/* Text colors */
+[data-theme="light"] .hero-title,
+[data-theme="light"] .about-name,
+[data-theme="light"] .project-title,
+[data-theme="light"] .detail-title,
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] h5,
+[data-theme="light"] h6 {
+  color: #0d0d0d !important;
+}
+
+[data-theme="light"] .hero-desc,
+[data-theme="light"] .about-text,
+[data-theme="light"] .project-desc,
+[data-theme="light"] .detail-text,
+[data-theme="light"] .text-secondary,
+[data-theme="light"] p {
+  color: #4b5563 !important;
+}
+
+/* Cards */
+[data-theme="light"] .skill-card,
+[data-theme="light"] .project-card,
+[data-theme="light"] .stat-card,
+[data-theme="light"] .highlight-card,
+[data-theme="light"] .counter-card,
+[data-theme="light"] .experience-card,
+[data-theme="light"] .tech-pill {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+[data-theme="light"] .skill-name,
+[data-theme="light"] .highlight-label,
+[data-theme="light"] .experience-role,
+[data-theme="light"] .tech-pill-name {
+  color: #0d0d0d !important;
+}
+
+/* Contact form inputs */
+[data-theme="light"] .contact-input {
+  background: #fff !important;
+  color: #0d0d0d !important;
+  border-color: rgba(0, 0, 0, 0.15) !important;
+}
+[data-theme="light"] .contact-input::placeholder {
+  color: #888 !important;
+}
+
+/* Blobs — soften on light bg */
+[data-theme="light"] .blob {
+  opacity: 0.12 !important;
+}
