@@ -16,7 +16,7 @@ const projectsData = {
     subtitle: "Personal portfolio website — MERN Stack",
     image: portfolioImg,
     live: "https://your-portfolio.vercel.app", // 🔴 update with real link
-    github: "https://github.com/Debasis-pramnik2000/mern-portfolio", // 🔴 update
+    github: "https://debasisprotfolio-ygmz-three.vercel.app/", // 🔴 update
     tech: ["MongoDB", "Express.js", "React", "Node.js", "Bootstrap", "JWT Auth"],
     overview:
       "A fully responsive personal portfolio website that showcases my projects, skills, and contact information. Built with the MERN stack, it includes a working contact form that stores messages in MongoDB and an admin authentication system for managing content.",
